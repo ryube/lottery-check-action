@@ -1,5 +1,7 @@
 동행복권 사이트에서 온라인으로 구매한 로또/연금복권이 최근 1주일내에 당첨된 것이 있는지 확인하는 github action입니다.
 
+프로그램 리파지토리: <https://github.com/chaeyk/lottery-agent>
+
 # inputs
 
 | 이름 | 설명 |

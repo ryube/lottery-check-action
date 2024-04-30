@@ -8,8 +8,8 @@
 | --- | --- |
 | username | 동행복권 사이트의 계정  |
 | password | 동행복권 사이트 계정의 비밀번호 |
-| telegram-bot-token | 텔레그램 봇ID |
-| telegram-chatid | 텔레그램 메시지 수신자 ID |
+| telegram-bot-token | 텔레그램 봇ID. 없어도 됨 |
+| telegram-chatid | 텔레그램 메시지 수신자 ID. 없어도 됨 |
 | lottery-code | 복권 종류 |
 
 **lottery-code** 정의

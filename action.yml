@@ -1,33 +1,33 @@
-name: '동행복권 당첨 확인 액션'
-description: '동행복권 사이트에서 복권이 당첨되었는지 확인한다.'
+name: "동행복권 당첨 확인 액션"
+description: "동행복권 사이트에서 복권이 당첨되었는지 확인한다."
 inputs:
   username:
-    description: '동행복권 계정 ID'
+    description: "동행복권 계정 ID"
     required: true
   password:
-    description: '동행복권 계정 비밀번호'
+    description: "동행복권 계정 비밀번호"
     required: true
   telegram-bot-token:
-    description: '결과를 발송할 텔레그램 봇 토큰'
+    description: "결과를 발송할 텔레그램 봇 토큰"
     required: false
   telegram-chatid:
-    description: '텔레그램 메시지를 수신할 아이디 (숫자), 내 아이디는 @userinfobot 에게 물어보면 알 수 있다.'
+    description: "텔레그램 메시지를 수신할 아이디 (숫자), 내 아이디는 @userinfobot 에게 물어보면 알 수 있다."
     required: false
   lottery-code:
-    description: '복권 선택 (lo40: 로또, lp72: 연금복권)'
+    description: "복권 선택 (lo40: 로또, lp72: 연금복권)"
     required: true
 
 runs:
-  using: 'docker'
-  image: 'docker://chaeyk/lottery-agent:v1'
+  using: "docker"
+  image: "docker://ryube/lottery-agent:v1"
   env:
     DHL_USERID: ${{ inputs.username }}
     DHL_PASSWORD: ${{ inputs.password }}
     TLG_BOTTOKEN: ${{ inputs.telegram-bot-token }}
     TLG_CHATID: ${{ inputs.telegram-chatid }}
   args:
-  - check
-  - ${{ inputs.lottery-code }}
+    - check
+    - ${{ inputs.lottery-code }}
 
 branding:
   icon: gift
